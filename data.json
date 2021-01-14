@@ -1,0 +1,47 @@
+{
+  "users":[
+    {
+      "id": 1,
+      "name": "anna",
+      "birthday": "",
+      "bio": "",
+      "img": "/images/user1.jpg"
+
+    },
+    {
+      "id": 2,
+      "name": "Clinton",
+      "birthday": "",
+      "bio": "",
+      "img": "/images/user2.jpg"
+
+    },
+    {
+      "id": 3,
+      "name": "Kenneth",
+      "birthday": "",
+      "bio": "",
+      "img": "/images/user3.jpg"
+
+    },
+    {
+      "id": 4,
+      "name": "Pete",
+      "birthday": "",
+      "bio": "",
+      "img": "/images/user4.jpg"
+
+    },
+    {
+      "id": 5,
+      "name": "Christo",
+      "birthday": "",
+      "bio": "",
+      "img": "/images/jackedwolf.jpg"
+
+    }
+  ]
+
+
+
+}
