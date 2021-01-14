@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon index --ignore data.json",
-    "test": "jest --watchAll"
+    "test": "jest"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["test.json"]
   },
   "repository": {
     "type": "git",
