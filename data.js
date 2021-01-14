@@ -9,7 +9,13 @@ module.exports = {
 }
 
 function getUserById(file, id, cb) {
-
+  loadJson(file, (err, data) => {
+    const foundUser = data.users.find( (element) => {
+      element.id === id
+    })
+    if (foundUser === undefined) return cb(new Error(err.message))
+    cb(null, foundUser)
+  })
 }
 
 function newUser(file, details, cb) {
