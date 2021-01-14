@@ -1,0 +1,30 @@
+
+header {
+  
+}
+
+h1 {
+  color: red;
+}
+
+.profileImg {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: solid #fff;
+  border-width: 6px, 6px, 50px, 6px; 
+  box-shadow: 1px, 1px, 5px #333;
+}
+
+.polaroid {
+ 
+}
+
+.profileData {
+
+}
+
+
+body {
+  background-color: grey;
+}
