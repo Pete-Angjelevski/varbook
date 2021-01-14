@@ -29,7 +29,7 @@ function editUser(id, details, cb) {
 function loadJson(file, cb) {
   fs.readFile(file, 'UTF-8', (err, data) => {
     if (err) return cb(new Error(err.message))
-    cb(null, data)
+    cb(null, JSON.parse(data))
   })
 }
 
