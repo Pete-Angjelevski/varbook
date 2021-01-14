@@ -1,10 +1,33 @@
 
+/* 
+#eff7e1
+
+# #*/
+:root{
+  --yellow: #f8dc81;
+  --pale-green: #eff7e1;
+  --green:  #76ac9a;
+  --dark-green: #214151;
+
+}
+
 header {
-  
+  padding: 15px;
+  text-align: center;
+  background: var(--green);
+  color: white;
+  font-size: 30px;
 }
 
 h1 {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 5px;
+}
+
+h2 {
   color: red;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 5px;
 }
 
 .polaroid  {
@@ -43,3 +66,7 @@ ul.profile-info {
   list-style-type: none;
 }
 
+
+body{
+  background-color: var(--);
+}
