@@ -6,7 +6,11 @@ const path = require('path')
 
 const { json } = require('express')
 
+const dataFn = require('./data.js')
+
 const routes = express.Router()
+
+
 
 module.exports = routes
 
@@ -49,20 +53,13 @@ routes.get('/', (req,res) => {
 // USER PROFILE
 routes.get('/user/:id', (req,res)=>{
 
-  const id= Number(req.params.id)
+  const id = Number(req.params.id)
     // currentUser = dataPath.users.find( user => user.id === id)
 
-  const userPageData = {
-    title: "Profile",
-    userData: dataPath,
-    id: 1,
-    name: "Anna",
-    birthday: "february 24",
-    bio: "super cool and loves drum and bass",
-    img: "/images/user1.jpg"  
-  }
+  dataFn.getUserById('data.json', id, (err, userPageData) => {
+    res.render('user', userPageData )
+  }) 
 
-  res.render('user', userPageData  )
 
 })
 
