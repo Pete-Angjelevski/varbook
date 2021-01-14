@@ -3,40 +3,40 @@
     {
       "id": 1,
       "name": "Anna",
-      "birthday": "",
-      "bio": "",
+      "birthday": "9 January",
+      "bio": " Has numerous battlescars from the kitchen",
       "img": "/images/user1.jpg"
 
     },
     {
       "id": 2,
       "name": "Clinton",
-      "birthday": "",
-      "bio": "",
+      "birthday": "14 January",
+      "bio": " Lowkey knows the best jokes, highkey is the best dude",
       "img": "/images/user2.jpg"
 
     },
     {
       "id": 3,
       "name": "Kenneth",
-      "birthday": "",
-      "bio": "",
+      "birthday": "November 23",
+      "bio": " will never tell you this but he actually invtented GitHub",
       "img": "/images/user3.jpg"
 
     },
     {
       "id": 4,
       "name": "Pete",
-      "birthday": "",
-      "bio": "",
+      "birthday": "10 October",
+      "bio": "loves fighting combos and Maccas combos",
       "img": "/images/user4.jpg"
 
     },
     {
       "id": 5,
       "name": "Christo",
-      "birthday": "",
-      "bio": "",
+      "birthday": "18 October",
+      "bio": "loves dnb so much you would never even believe",
       "img": "/images/jackedwolf.jpg"
 
     }
