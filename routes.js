@@ -20,7 +20,12 @@ routes.get('/', (req,res) => {
   const homeData = {
 
     title: "DevBook",
-    userData: dataPath
+    userData: dataPath,    
+    id: 1,
+    name: "Anna",
+    birthday: "",
+    bio: "",
+    img: "/images/user1.jpg"    
   }
 
 
@@ -40,33 +45,61 @@ routes.get('/', (req,res) => {
 
 })
 
-// REGISTER
-routes.get('/register', (req,res) => {
 
-  const regData = {
-    title:"Create your profile",
-    userData: dataPath
-  }
-
-
-  res.render('register', regData )
-})
-
-// USERPROFILE
-
+// USER PROFILE
 routes.get('/user/:id', (req,res)=>{
 
   const id= Number(req.params.id)
     // currentUser = dataPath.users.find( user => user.id === id)
 
   const userPageData = {
-    title: "current user",
-    userData: dataPath
+    title: "Profile",
+    userData: dataPath,
+    id: 1,
+    name: "Anna",
+    birthday: "february 24",
+    bio: "super cool and loves drum and bass",
+    img: "/images/user1.jpg"  
   }
 
-
-
-  
   res.render('user', userPageData  )
 
 })
+
+// EDIT PROFILE
+routes.get('/user/:id/edit', (req,res) => {
+
+  const regData = {
+    title:"edit  profile",
+    userData: dataPath,
+    id: 1,
+    name: "Anna",
+    birthday: "",
+    bio: "",
+    img: "/images/user1.jpg" 
+  }
+
+  
+  res.render('edit', regData )
+})
+
+
+// POST ROUTE
+routes.post('/user/:id/edit', (req,res) => {
+
+  const id = Number(req.params.id)
+
+  const newName = req.body.name
+  const newBirthday = req.body.birthday
+  const newBio= req.body.bio
+
+  res.redirect(`/user/${id}`)
+
+  console.log(newName)
+  console.log(newBirthday)
+  console.log(newBio)
+
+
+})
+
+
