@@ -25,7 +25,7 @@ h1 {
 }
 
 h2 {
-  color: red;
+ 
   font-family: 'Anton', sans-serif;
   letter-spacing: 5px;
 }
@@ -34,7 +34,7 @@ h2 {
   background: #ffffff;
   display: inline-block;
   margin: 55px 75px 30px;
-  padding: 15px 15px 75px;
+  padding: 15px 15px 30px;
   text-align: center;
   text-decoration: none;
   -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
@@ -62,6 +62,12 @@ h2 {
   object-fit: cover;
 }
 
+figcaption.name {
+  padding-top: 25px;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 40px;
+}
+
 ul.profile-info {
   list-style-type: none;
 }
@@ -69,4 +75,14 @@ ul.profile-info {
 
 body{
   background-color: var(--);
+}
+
+.profile-info {
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 30px;
+}
+
+figure {
+  display: block;
+  margin: 0 auto;
 }
