@@ -1,29 +1,10 @@
-{{!-- TITLE --}}
-
-
-{{!-- image --}}
-
-{{!-- name --}}
-{{!-- bday --}}
-{{!-- bio --}}
-
-<div>
-<img src="{{img}}" width="150px" height="150px">
+<div class="polaroid">
+  <img src="/images/user1.jpg" alt="Profile Photo" class="profileImg">
 </div>
-
-<div>
-{{name}}
+<div class="profileData">
+  <ul class="profile-info">
+    <li>Name: {{name}}</li>
+    <li>Birthday: {{birthday}}</li>
+    <li>Bio: {{bio}}</li>
+  </ul>
 </div>
-
-<div>
-{{birthday}}
-</div>
-
-<div>
-{{bio}}
-</div>
-
- 
-
-
-<p> this is where the users profile will be shown</p>
