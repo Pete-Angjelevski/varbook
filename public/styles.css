@@ -7,24 +7,39 @@ h1 {
   color: red;
 }
 
-.profileImg {
+.polaroid  {
+  background: #ffffff;
+  display: inline-block;
+  margin: 55px 75px 30px;
+  padding: 15px 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -webkit-transition: all .20s linear;
+  -moz-transition: all .20s linear;
+  transition: all .20s linear;
+  z-index: 0;
+  position: relative;
+}
+
+.polaroid:hover {
+  color: #333;
+  font-size: 25px;
+  content: attr(title);
+  position: relative;
+  top: 15px;
+}
+
+.polaroid img {
+  display: block;
   width: 250px;
   height: 250px;
   object-fit: cover;
-  border: solid #fff;
-  border-width: 6px, 6px, 50px, 6px; 
-  box-shadow: 1px, 1px, 5px #333;
 }
 
-.polaroid {
- 
+ul.profile-info {
+  list-style-type: none;
 }
 
-.profileData {
-
-}
-
-
-body {
-  background-color: grey;
-}
