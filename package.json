@@ -7,7 +7,6 @@
     "start": "node index",
     "dev": "nodemon index --ignore data.json",
     "test": "jest --watchAll"
-
   },
   "repository": {
     "type": "git",
