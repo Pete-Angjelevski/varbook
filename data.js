@@ -32,7 +32,7 @@ function loadJson(file, cb) {
 }
 
 function saveJson(file, data, cb) {
-  fs.writeFile(file, data, (err) => {
+  fs.writeFile(file, JSON.stringify(data), (err) => {
     if (err) return cb(new Error(err.message))
     cb()
   })
