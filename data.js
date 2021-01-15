@@ -21,7 +21,9 @@ function getUserById(file, id, cb) {
 }
 
 function newUser(file, details, cb) {
-  
+  loadJson(file, (err, data) => {
+    
+  })
 }
 
 function editUser(id, details, cb) {

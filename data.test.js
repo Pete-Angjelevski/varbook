@@ -44,3 +44,23 @@ test('getNextId appropriately returns the next available id', () => {
   expect(actual).toBe(expected)
 
 })
+
+test('can create new user', () => {
+  fs.writeFileSync(testPath, JSON.stringify({
+    users : [
+      {
+        id: 1,
+        name: 'anna',
+        birthday: 'very cool day',
+      }
+    ]
+  }))
+  
+  data.newUser(testPath, { name: 'kenneth', birthday: 'nov 23' })
+
+  const allData = JSON.parse(fs.readFileSync(testPath))
+  
+  expect(allData.users.length).toBe(2)
+  expect(allData.users[1].name).toBe('kenneth')
+  expect(allData.users[1].id).toBe(2)
+})
