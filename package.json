@@ -9,7 +9,9 @@
     "test": "jest"
   },
   "jest": {
-    "testPathIgnorePatterns": ["test.json"]
+    "testPathIgnorePatterns": [
+      "test.json"
+    ]
   },
   "repository": {
     "type": "git",
