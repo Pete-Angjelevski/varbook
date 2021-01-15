@@ -25,7 +25,7 @@ function newUser(file, details, cb) {
 }
 
 function editUser(id, details, cb) {
-  
+  console.log(details)
 }
 
 function displayUsers(file, cb){
