@@ -36,3 +36,11 @@ test('saveJson can save a file', (done) => {
     done()
   })
 })
+
+test('getNextId appropriately returns the next available id', () => {
+  const actual = data.internals.getNextId([ { id: 1 }, { id: 2 }, { id: 3 }, { id: 5 }])
+  const expected = 6
+
+  expect(actual).toBe(expected)
+
+})

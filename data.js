@@ -29,6 +29,14 @@ function editUser(id, details, cb) {
 
 // Internal Utilities
 
+function getNextId(userList) {
+  const highestId = userList
+    .map(user => user.id)
+    .reduce((highest, id) => id > highest ? id : highest)
+
+  return highestId + 1
+}
+
 function loadJson(file, cb) {
   fs.readFile(file, 'UTF-8', (err, data) => {
     if (err) return cb(new Error(err.message))
