@@ -95,4 +95,16 @@ ul.profile-info {
 
 ul {
   list-style-type: none; 
+  display: inline-block
+}
+
+.editForm {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0px;
+  font-size: 20px;
+}
+
+.formGroup {
+  margin: 10px;
+  align-items: right;
 }

@@ -4,26 +4,26 @@
 <form method="POST" action="/user/{{id}}/edit" >
 <ul class="editForm">
 {{!-- name --}}
-<li>
+<li class="formGroup">
   <label for="name">Name:</label>
     <input type="text" name="name" value="{{name}}">
 </li>
 
 
 {{!-- Birthday () --}}
-<li>
+<li class="formGroup">
   <label for="birthday">Birthday (month + date)</label>
   <input type="text" name="birthday" value="{{birthday}}">
 </li>
 
 
 {{!-- bio --}}
-<li>
+<li class="formGroup">
   <label for="bio">Short but quirky bio:</label>
   <input type="text" name="bio" value="{{bio}}">
 </li>
 
 </ul>
-
+<br>
 <button>SUBMIT!</button>
 </form>
