@@ -8,6 +8,7 @@ const { json } = require('express')
 
 const dataFn = require('./data.js')
 const data = require('./data.js')
+const { getUserById } = require('./data.js')
 
 const routes = express.Router()
 
@@ -61,19 +62,13 @@ routes.get('/user/:id', (req,res)=>{
 
 // EDIT PROFILE
 routes.get('/user/:id/edit', (req,res) => {
+  const { id } = req.params
 
-  const regData = {
-    title:"edit  profile",
-    userData: dataPath,
-    id: 1,
-    name: "Anna",
-    birthday: "",
-    bio: "",
-    img: "/images/user1.jpg" 
-  }
-
-  
-  res.render('edit', regData )
+  getUserById(dataPath, id, (err, user) => {
+    console.log(err)
+    if (err) return res.status(404).send('cannot find user')
+    res.render('edit', user)
+  })
 })
 
 
