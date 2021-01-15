@@ -25,16 +25,16 @@ routes.get('/', (req,res) => {
 
   
   
-  const tempHomeData = {
+  // const tempHomeData = {
 
-    title: "DevBook",
-    userData: dataPath,    
-    id: 1,
-    name: "Anna",
-    birthday: "",
-    bio: "",
-    img: "/images/user1.jpg"    
-  }
+  //   title: "DevBook",
+  //   userData: dataPath,    
+  //   id: 1,
+  //   name: "Anna",
+  //   birthday: "",
+  //   bio: "",
+  //   img: "/images/user1.jpg"    
+  // }
 
   dataFn.displayUsers('data.json',(err, homeData) => {
 

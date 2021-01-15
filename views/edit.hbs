@@ -1,35 +1,29 @@
 {{!-- title --}}
 
 
-<form method="POST" action="/user/{{id}}/edit">
-<ul>
+<form method="POST" action="/user/{{id}}/edit" >
+<ul class="editForm">
 {{!-- name --}}
-<li>
-  <label for="name">
-    Name:
-    <input type="text" name="name">
-  </label>
+<li class="formGroup">
+  <label for="name">Name:</label>
+    <input type="text" name="name" value="{{name}}">
 </li>
 
 
 {{!-- Birthday () --}}
-<li>
-  <label for="birthday">
-    Birthday (month + date)
-    <input type="text" name="birthday">
-  </label>
+<li class="formGroup">
+  <label for="birthday">Birthday (month + date)</label>
+  <input type="text" name="birthday" value="{{birthday}}">
 </li>
 
 
 {{!-- bio --}}
-<li>
-  <label for="bio">
-    Short but quirky bio:
-    <input type="text" name="bio">
-  </label>
+<li class="formGroup">
+  <label for="bio">Short but quirky bio:</label>
+  <input type="text" name="bio" value="{{bio}}">
 </li>
 
 </ul>
-
+<br>
 <button>SUBMIT!</button>
 </form>
