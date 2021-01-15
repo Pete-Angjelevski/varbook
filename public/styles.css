@@ -70,6 +70,12 @@ ul.profile-info {
   margin: 50px;
 }
 
+.homeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 .footer {
   position: fixed;
@@ -79,4 +85,9 @@ ul.profile-info {
   background-color: var(--green);
   color: var(--yellow);
   text-align: center;
+}
+
+
+.profilePicHome {
+  margin: 20px;
 }

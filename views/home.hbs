@@ -1,11 +1,12 @@
   
-<div class="container">
-  {{#each puppies}}
-  <div class="puppy-list">
+<div class="homeContainer">
+  {{#each users}}
+  <div class="profilePicHome">
     <a href="/user/{{id}}">
-        <div class ="polaroid" >
-            <img src="{{img}}" alt="{{name}}" class="profileImg">
-        </div>
+         <figure class ="polaroid" >
+          <img src="{{img}}" alt="Profile Photo" class="profileImg">
+        <figcaption class ="name">{{name}}</figcaption>
+      </figure>
     </a>
   </div>
   {{/each}}
