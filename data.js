@@ -4,6 +4,7 @@ module.exports = {
   getUserById,
   newUser,
   editUser,
+  displayUsers,
   internals: {
     getNextId,
     loadJson,
@@ -26,6 +27,16 @@ function newUser(file, details, cb) {
 function editUser(id, details, cb) {
   
 }
+
+function displayUsers(file, cb){
+
+    loadJson(file, (err, data) => { 
+    cb(null, data)
+  })
+
+
+}
+
 
 // Internal Utilities
 
