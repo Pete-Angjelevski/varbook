@@ -24,8 +24,14 @@ function newUser(file, details, cb) {
   
 }
 
-function editUser(id, details, cb) {
-  console.log(details)
+function editUser(file, id, details, cb) {
+  loadJson(file, (err, data) => {
+    if (err) cb(err)
+    const foundUser = data.users.find( element => element.id === id)
+    Object.assign(foundUser, details)
+
+    saveJson(file, data, cb)
+  })
 }
 
 function displayUsers(file, cb){
