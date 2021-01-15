@@ -4,8 +4,6 @@ module.exports = {
   getUserById,
   newUser,
   editUser,
-  loadJson,
-  saveJson,
 }
 
 function getUserById(file, id, cb) {
@@ -23,6 +21,8 @@ function newUser(file, details, cb) {
 function editUser(id, details, cb) {
   
 }
+
+// Internal Utilities
 
 function loadJson(file, cb) {
   fs.readFile(file, 'UTF-8', (err, data) => {
