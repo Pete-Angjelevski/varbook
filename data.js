@@ -4,6 +4,11 @@ module.exports = {
   getUserById,
   newUser,
   editUser,
+  internals: {
+    getNextId,
+    loadJson,
+    saveJson,
+  }
 }
 
 function getUserById(file, id, cb) {

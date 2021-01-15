@@ -14,7 +14,7 @@ test('loadJson can load a file', (done) => {
 
   const expected = { prop: "cool" }
 
-  data.loadJson(testPath, (err, actual) => {
+  data.internals.loadJson(testPath, (err, actual) => {
     expect(actual).toEqual(expected)
     fs.unlinkSync(testPath)
     done()
@@ -23,7 +23,7 @@ test('loadJson can load a file', (done) => {
 })
 
 test('saveJson can save a file', (done) => {
-  data.saveJson(testPath, { wolfStatus: "jacked" }, (err) => {
+  data.internals.saveJson(testPath, { wolfStatus: "jacked" }, (err) => {
     expect(err).toBeFalsy()
 
     const dataObj = fs.readFileSync(testPath)
