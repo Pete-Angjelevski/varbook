@@ -44,3 +44,25 @@ test('getNextId appropriately returns the next available id', () => {
   expect(actual).toBe(expected)
 
 })
+
+test('can edit user', (done) => {
+  fs.writeFileSync(testPath, JSON.stringify({
+    users : [
+      {
+        id: 1,
+        name: 'anna',
+        birthday: 'very cool day',
+      }
+    ]
+  }))
+
+  data.editUser(testPath, 1, { birthday: 'yesterday' }, (err) => {
+    const allData = JSON.parse(fs.readFileSync(testPath))
+    
+    expect(allData.users.length).toBe(1)
+    expect(allData.users[0].birthday).toBe('yesterday')
+    done()
+    
+  })
+
+})

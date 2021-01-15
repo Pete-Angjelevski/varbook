@@ -79,20 +79,13 @@ routes.get('/user/:id/edit', (req,res) => {
 
 // POST ROUTE
 routes.post('/user/:id/edit', (req,res) => {
-
   const id = Number(req.params.id)
+  const { name, birthday, bio } = req.body
 
-  const newName = req.body.name
-  const newBirthday = req.body.birthday
-  const newBio= req.body.bio
-
-  res.redirect(`/user/${id}`)
-
-  console.log(newName)
-  console.log(newBirthday)
-  console.log(newBio)
-
-
+  data.editUser(dataPath, id, { name, birthday, bio }, (err) => {
+    if (err) return res.status(500).send('could not edit')
+    res.redirect(`/user/${id}`)
+  })
 })
 
 
