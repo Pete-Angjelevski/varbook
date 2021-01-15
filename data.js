@@ -14,7 +14,7 @@ module.exports = {
 
 function getUserById(file, id, cb) {
   loadJson(file, (err, data) => {
-    const foundUser = data.users.find( element => element.id === id)
+    const foundUser = data.users.find( element => element.id == id)
     if (foundUser === undefined) return cb(new Error('this is messed up'))
     cb(null, foundUser)
   })
@@ -24,8 +24,14 @@ function newUser(file, details, cb) {
   
 }
 
-function editUser(id, details, cb) {
-  
+function editUser(file, id, details, cb) {
+  loadJson(file, (err, data) => {
+    if (err) cb(err)
+    const foundUser = data.users.find( element => element.id === id)
+    Object.assign(foundUser, details)
+
+    saveJson(file, data, cb)
+  })
 }
 
 function displayUsers(file, cb){
