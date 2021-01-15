@@ -4,8 +4,12 @@ module.exports = {
   getUserById,
   newUser,
   editUser,
-  loadJson,
-  saveJson,
+  displayUsers,
+  internals: {
+    getNextId,
+    loadJson,
+    saveJson,
+  }
 }
 
 function getUserById(file, id, cb) {
@@ -24,6 +28,26 @@ function editUser(id, details, cb) {
   
 }
 
+function displayUsers(file, cb){
+
+    loadJson(file, (err, data) => { 
+    cb(null, data)
+  })
+
+
+}
+
+
+// Internal Utilities
+
+function getNextId(userList) {
+  const highestId = userList
+    .map(user => user.id)
+    .reduce((highest, id) => id > highest ? id : highest)
+
+  return highestId + 1
+}
+
 function loadJson(file, cb) {
   fs.readFile(file, 'UTF-8', (err, data) => {
     if (err) return cb(new Error(err.message))
@@ -32,7 +56,7 @@ function loadJson(file, cb) {
 }
 
 function saveJson(file, data, cb) {
-  fs.writeFile(file, data, (err) => {
+  fs.writeFile(file, JSON.stringify(data), (err) => {
     if (err) return cb(new Error(err.message))
     cb()
   })

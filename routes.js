@@ -7,6 +7,7 @@ const path = require('path')
 const { json } = require('express')
 
 const dataFn = require('./data.js')
+const data = require('./data.js')
 
 const routes = express.Router()
 
@@ -21,7 +22,9 @@ const dataPath = path.join(__dirname, 'data.json')
 // HOME PAGE
 routes.get('/', (req,res) => {
 
-  const homeData = {
+  
+  
+  const tempHomeData = {
 
     title: "DevBook",
     userData: dataPath,    
@@ -32,20 +35,12 @@ routes.get('/', (req,res) => {
     img: "/images/user1.jpg"    
   }
 
+  dataFn.displayUsers('data.json',(err, homeData) => {
 
-  fs.readFile(dataPath, 'utf8', (err,data) => {
-    if (err){ 
-      console.log("whoops")
-    }
-    else {
-
-    var  obj = JSON.parse(data)
-    
-    console.log('object', obj)
-  }
+    res.render('home',homeData)
   })
 
-  res.render('home',homeData)
+  
 
 })
 
@@ -57,6 +52,7 @@ routes.get('/user/:id', (req,res)=>{
     // currentUser = dataPath.users.find( user => user.id === id)
 
   dataFn.getUserById('data.json', id, (err, userPageData) => {
+
     res.render('user', userPageData )
   }) 
 
