@@ -1,2 +1,14 @@
-<p> hello and welcome to the homepage. This homepage is gonna be tight</p>
+  
+<div class="container">
+  {{#each puppies}}
+  <div class="puppy-list">
+    <a href="/user/{{id}}">
+        <div class ="polaroid" >
+            <img src="{{img}}" alt="{{name}}" class="profileImg">
+        </div>
+    </a>
+  </div>
+  {{/each}}
+</div>
+
 

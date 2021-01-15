@@ -70,3 +70,14 @@ ul.profile-info {
 body{
   background-color: var(--);
 }
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--green);
+  color: var(--yellow);
+  text-align: center;
+}
