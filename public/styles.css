@@ -91,3 +91,8 @@ ul.profile-info {
 .profilePicHome {
   margin: 20px;
 }
+
+
+ul {
+  list-style-type: none; 
+}
