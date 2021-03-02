@@ -28,22 +28,22 @@ header {
 }
 
 .polaroid {
-  background-color: #ffffff
+  background-color: #ffffff;
   /* display: inline-block; */
   margin: 55px 75px 30px;
   padding: 15px 15px 30px;
   text-align: center;
   text-decoration: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
-  width: 300px;
+  width: 350px;
   display: block;
   margin: 0 auto;
 }
 
 .polaroid img {
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   display: block;
   margin: 0 auto;
@@ -107,4 +107,87 @@ ul {
 .formGroup {
   margin: 10px;
   align-items: right;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .polaroid {
+    background-color: #ffffff;
+    /* display: inline-block; */
+    margin: 55px 75px 30px;
+    padding: 15px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .polaroid img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .polaroid {
+    background-color: #ffffff;
+    /* display: inline-block; */
+    margin: 55px 75px 30px;
+    padding: 15px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+    width: 275px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+    .polaroid img {
+      display: block;
+      width: 225px;
+      height: 225px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+  .polaroid {
+    background-color: #ffffff;
+    /* display: inline-block; */
+    margin: 55px 75px 30px;
+    padding: 15px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+    width: 225px;
+    display: block;
+    margin: 0 auto;
+  }
+  .polaroid img {
+    display: block;
+    width:  175px;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  figcaption.name {
+    padding-top: 25px;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 25px;
+    color: white';
+  }
+
+  ul.profile-info {
+    font-size: 20px;
+  }
 }
